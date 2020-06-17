@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/textColor</item>
+        <item name="colorPrimaryDark">@color/textColor</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+        <item name="colorAccent">@color/textColorBlack</item>
+        <item name="colorError">@color/red</item>
+        <item name="android:statusBarColor">@color/textColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/textColor</item>
+        <item name="colorPrimary">@color/textColor</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+        <item name="colorAccent">@color/textColorBlack</item>
+        <item name="colorError">@color/red</item>
+        <item name="android:statusBarColor">@color/textColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/textColorBlack</item>
+        <item name="android:background">@color/textColor</item>
+        <item name="android:tint">@color/green</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="WhiteRadioButton" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.EditTextTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/textColorBlack</item>
+        <item name="colorPrimaryDark">@color/textColorBlack</item>
+        <item name="colorAccent">@color/textColorBlack</item>
+    </style>
+
+    <style name="button_primary">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:height">56dp</item>
+    </style>
+
+    <style name="button_primary1">
+        <item name="android:backgroundTint">@color/gws_color_material_grey_500</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:height">56dp</item>
+    </style>
+</resources>

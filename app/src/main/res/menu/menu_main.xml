@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fridayapp.roomdatabase.activities.MainActivity">
+    <item android:id="@+id/search"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/search"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView|always"/>
+    <item
+        android:id="@+id/delete_all_taks"
+        android:title="@string/delete_all_todos"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/delete_completed_taks"
+        android:title="Delete completed todos"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/backup_taks"
+        android:title="@string/backup_todos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/import_taks"
+        android:title="@string/import_todos"
+        app:showAsAction="never" />
+</menu>

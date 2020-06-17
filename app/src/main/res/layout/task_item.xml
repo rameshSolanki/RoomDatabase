@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_task"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/relative_view"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@color/orange_fun"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/each_pending_todo_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:maxLines="2"
+                android:text="@string/title"
+                android:fontFamily="serif"
+                android:textColor="@color/note_list_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/each_pending_todo_section1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <CheckBox
+            android:id="@+id/statusCheckBox"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:checked="true"
+                android:clickable="false"
+                android:buttonTint="@color/green" />
+
+            <TextView
+                android:id="@+id/text_view_priority"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#4CAF50"
+                android:textSize="12sp"
+                android:fontFamily="serif"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_last_modified"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="serif"
+                tools:text="12/12/2018" />
+            <ImageButton
+                android:id="@+id/alarmButton"
+                app:srcCompat="@drawable/alarm"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:tint="@color/gws_color_material_grey_500"
+                style="?android:attr/borderlessButtonStyle"/>
+            <ImageButton
+                android:id="@+id/edit_task"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:tint="@color/gws_color_material_grey_500"
+                app:srcCompat="@drawable/edit1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@color/dividers" />
+
+            <ImageButton
+                android:id="@+id/remove_task"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:tint="@color/red"
+                app:srcCompat="@drawable/delete1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

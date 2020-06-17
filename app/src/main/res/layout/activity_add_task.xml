@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:id="@+id/activity_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#fff"
+            android:transitionName="cardTransition"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:id="@+id/linear_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:context=".activities.AddEditTaskActivity">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/title"
+                        android:textSize="13sp"
+                        android:fontFamily="serif"
+                        android:imeOptions="actionNext"
+                        android:minLines="1"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/details"
+                        android:textSize="13sp"
+                        android:fontFamily="serif"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edit_text_gray"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:padding="13dp"
+                        android:tint="@color/textColor"
+                        app:srcCompat="@drawable/date"
+                        android:contentDescription="@string/app_name" />
+
+
+                    <EditText
+                        android:id="@+id/edit_text_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5.5"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:fontFamily="serif"
+                        android:hint="Select Date"
+                        android:inputType="date"
+                        android:padding="12dp"
+                        android:textSize="13sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edit_text_gray"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:padding="12dp"
+                        android:tint="@color/textColor"
+                        app:srcCompat="@drawable/ic_add_time" />
+
+
+                    <EditText
+                        android:id="@+id/edit_text_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5.5"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:fontFamily="serif"
+                        android:hint="Select Time"
+                        android:inputType="time"
+                        android:padding="12dp"
+                        android:textSize="13sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="serif"
+                    android:text="@string/select_priority"
+                    android:textSize="13sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edit_text_gray"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RadioButton
+                            android:id="@+id/radButton1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableStart="@drawable/radio_selector_red"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="serif"
+                            android:paddingStart="25dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="18dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="13sp"
+                            android:text="@string/high_priority"
+                            android:theme="@style/WhiteRadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/radButton2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableStart="@drawable/radio_selector_yellow"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="serif"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="18dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="13sp"
+                            android:text="@string/med_priority"
+                            android:theme="@style/WhiteRadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/radButton3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableStart="@drawable/radio_selector_green"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="serif"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="18dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="13sp"
+                            android:text="@string/low_priority"
+                            android:theme="@style/WhiteRadioButton" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="serif"
+                    android:text="Mark as :"
+                    android:textSize="13sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupCompleted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/radButton1C"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableStart="@drawable/completed"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="serif"
+                            android:paddingStart="25dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="18dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="13sp"
+                            android:text="Completed" />
+
+                        <RadioButton
+                            android:id="@+id/radButton2C"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableStart="@drawable/pending"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="serif"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="18dp"
+                            android:paddingBottom="5dp"
+                            android:text="Pending"
+                            android:textSize="13sp"
+                            android:theme="@style/WhiteRadioButton" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edit_text_gray"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/alarmButton"
+                    app:srcCompat="@drawable/alarm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:padding="13dp"
+                    android:tint="@color/textColor"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:id="@+id/alarmView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:fontFamily="serif"
+                    android:padding="12dp"
+                    android:textSize="13sp" />
+            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageTask"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    app:srcCompat="@drawable/ic_launcher_background" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last updated on:-"
+                        android:textSize="13sp"
+                        android:id="@+id/update_title"
+                        android:fontFamily="serif"/>
+
+                    <TextView
+                        android:id="@+id/update_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="13sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/timestamp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonCancel"
+                        style="@style/button_primary1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="serif"
+                        android:text="Cancel" />
+
+                    <Button
+                        android:id="@+id/buttonSave"
+                        style="@style/button_primary"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="serif"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:text="Save" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</FrameLayout>

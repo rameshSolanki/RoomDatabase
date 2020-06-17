@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColor">#ffff</color>
+    <color name="materialRed">#E74C3C</color>
+    <color name="materialOrange">#E67E22</color>
+    <color name="materialYellow">#F1C40F</color>
+    <color name="msg_no_notes">#999</color>
+    <color name="hint_enter_note">#89c3c3c3</color>
+    <color name="timestamp">#858585</color>
+    <color name="note_list_text">#232323</color>
+    <color name="red">#F44336</color>
+    <color name="yellow">#FF9800</color>
+    <color name="green">#4CAF50</color>
+    <color name="dividers">#B6B6B6</color>
+    <color name="gws_color_material_grey_500">#9E9E9E</color>
+    <color name="black_alpha54">#8A000000</color>
+    <!-- text color: white -->
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#ff4b4b4b</color>
+    <color name="textColorSecondaryLight">#ffcdcdcd</color>
+    <color name="textColorSecondaryLightInverse">#ff696969</color>
+    <color name="textColorBlack">#000000</color>
+
+    <!-- inverse text color: 87% black -->
+    <color name="textColorPrimaryInverse">#ffffff</color>
+    <color name="textColorSecondaryInverse">#ffb4b4b4</color>
+
+    <color name="darkDrawer">#ff373737</color>
+
+    <!-- alternative color palette -->
+    <color name="primary_inverse">#0097A7</color>
+    <color name="primary_dark_inverse">#006064</color>
+    <color name="primary_light_inverse">#4DD0E1</color>
+    <color name="accent_inverse">#FF9800</color>
+    <color name="accent">#FFC107</color>
+    <color name="orange_fun">#fc4a1a</color>
+    <color name="orange_fun_light">#f7b733</color>
+</resources>

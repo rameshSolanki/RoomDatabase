@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fridayapp.roomdatabase.activities.MainActivity">
+
+    <item
+        android:id="@+id/edit"
+        android:title="@string/edit_todo"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:icon="@drawable/edit1"/>
+</menu>
