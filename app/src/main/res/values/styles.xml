@@ -45,6 +45,7 @@
     </style>
 
     <style name="AppTheme.EditTextTheme" parent="Theme.AppCompat.Light">
+        <item name="background">@drawable/bg_edit_text_gray</item>
         <item name="colorPrimary">@color/textColorBlack</item>
         <item name="colorPrimaryDark">@color/textColorBlack</item>
         <item name="colorAccent">@color/textColorBlack</item>
